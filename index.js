@@ -6,6 +6,7 @@ import userRoute from "./routes/userRoute.js";
 import cors from "cors";
 const BASE_URL = process.env.BASE_URL;
 
+
 dotenv.config({
     path:".env"
 })
