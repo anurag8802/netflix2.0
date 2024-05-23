@@ -4,11 +4,12 @@ import databaseConnection from "./utils/database.js";
 import cookieParser from "cookie-parser";
 import userRoute from "./routes/userRoute.js";
 import cors from "cors";
-const BASE_URL = process.env.BASE_URL;
 
 dotenv.config({
     path:".env"
 })
+
+const BASE_URL = process.env.BASE_URL;
 
 databaseConnection();
 
@@ -18,10 +19,11 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'${BASE_URL}',
+    origin:'http://localhost:3000',
     credentials:true
 }
 app.use(cors(corsOptions));
+
 
 app.use("/api/v1/user", userRoute);
 
