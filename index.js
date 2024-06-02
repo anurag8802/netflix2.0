@@ -25,7 +25,7 @@ app.use(cookieParser());
 //     optionSuccessStatus:200
 // }
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 const allowedOrigins = [
     'http://localhost:3000',
     'https://nimble-pony-61673b.netlify.app'
