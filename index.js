@@ -19,7 +19,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin:'https://stately-semolina-9271b8.netlify.app/',
+    origin:'http://localhost:3000',
     credentials:true
 }
 app.use(cors(corsOptions));
