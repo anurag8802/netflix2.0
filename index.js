@@ -19,9 +19,10 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
 const port = process.env.PORT || 8080;
-
+// 'http://localhost:3000' || 
 const corsOptions = {
-    origin:'http://localhost:3000' || 'https://illustrious-faun-a1118c.netlify.app',
+    origin:'https://illustrious-faun-a1118c.netlify.app',
+    methods: ["GET","POST"],
     credentials:true
 }
 app.use(cors(corsOptions));
